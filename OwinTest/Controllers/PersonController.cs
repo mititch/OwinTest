@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace OwinTest.Controllers
 {
+    //ApiContriller implementation with CRUD
     public class PersonController : ApiController
     {
         // GET api/<controller>
@@ -32,12 +33,13 @@ namespace OwinTest.Controllers
         // PUT api/<controller>/5
         public void Put(int id, [FromBody]Person value)
         {
-            PersonStorage.Instance.Persons.Add(value);
+            //not implemented yet
         }
 
         // DELETE api/<controller>/5
         public void Delete(int id)
         {
+            //not implemented yet
         }
     }
 }
