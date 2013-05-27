@@ -16,6 +16,8 @@ namespace OwinTest
 
             var config = new HttpConfiguration();
 
+            
+            //attempt to use WebApi
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
@@ -24,8 +26,10 @@ namespace OwinTest
 
             app.UseWebApi(config);
 
+            //attempt to use CustomMiddleware component
             app.Use(typeof(AddHeaderMiddleware));
 
+            //attempt to use simple request handler
             app.UseHandlerAsync((req, res) =>
             {
                 res.ContentType = "text/plain";
