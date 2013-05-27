@@ -10,9 +10,6 @@ namespace OwinTest.Storage
 {
     public class PersonStorage
     {
-
-        private static readonly object _mutex = new object();
-
         private static readonly Lazy<PersonStorage> _instance = new Lazy<PersonStorage>(() => new PersonStorage());
 
         public static PersonStorage Instance
@@ -32,7 +29,5 @@ namespace OwinTest.Storage
                 new Person {Name="Second", Id = 2}
             };
         }
-
     }
-
 }
