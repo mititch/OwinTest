@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Owin.Host.HttpListener</id>
+    <version>1.1.0-beta1-20527-340</version>
+    <title>Microsoft.Owin.Host.HttpListener  (nightly 2013 521 27)</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/aspnetcomponent_enu.htm</licenseUrl>
+    <projectUrl>http://katanaproject.codeplex.com/</projectUrl>
+    <iconUrl>https://nugetgallery.blob.core.windows.net/icons/Microsoft.Owin.Host.HttpListener.1.1.0-beta1-20527-340.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Microsoft.Owin.Host.HttpListener</description>
+    <summary>Microsoft.Owin.Host.HttpListener</summary>
+    <tags>Microsoft OWIN</tags>
+    <references>
+      <reference file="Microsoft.Owin.Host.HttpListener.dll" />
+    </references>
+  </metadata>
+</package>

@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Owin.Diagnostics</name>
+    </assembly>
+    <members>
+        <member name="T:System.Reflection.AssemblyMetadataAttribute">
+            <summary>
+            Provided as a down-level stub for the 4.5 AssemblyMetaDataAttribute class.
+            All released assemblies should define [AssemblyMetadata(“Servicing”,”true”)].
+            </summary>
+        </member>
+        <member name="T:Microsoft.Owin.Diagnostics.DiagnosticsPageOptions">
+            <summary>
+            Options for the DiagnosticsPageMiddleware
+            </summary>
+        </member>
+        <member name="P:Microsoft.Owin.Diagnostics.DiagnosticsPageOptions.Path">
+            <summary>
+            Specifies which requests paths will be responded to. Exact matches only. Leave null to handle all requests.
+            </summary>
+        </member>
+        <member name="T:Owin.WelcomePageExtensions">
+            <summary>
+            IAppBuilder extensions for the WelcomePageMiddleware.
+            </summary>
+        </member>
+        <member name="M:Owin.WelcomePageExtensions.UseWelcomePage(Owin.IAppBuilder,Microsoft.Owin.Diagnostics.WelcomePageOptions)">
+            <summary>
+            Adds the WelcomePageMiddleware to the pipeline with the given options.
+            </summary>
+            <param name="builder"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Owin.WelcomePageExtensions.UseWelcomePage(Owin.IAppBuilder,System.String)">
+            <summary>
+            Adds the WelcomePageMiddleware to the pipeline with the given path.
+            </summary>
+            <param name="builder"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Owin.WelcomePageExtensions.UseWelcomePage(Owin.IAppBuilder)">
+            <summary>
+            Adds the WelcomePageMiddleware to the pipeline.
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Owin.Diagnostics.WelcomePageMiddleware">
+            <summary>
+            This middleware provides a default web page for new applications.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Owin.Diagnostics.WelcomePageMiddleware.#ctor(System.Func{System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.Tasks.Task},Microsoft.Owin.Diagnostics.WelcomePageOptions)">
+            <summary>
+            Creates a default web page for new applications.
+            </summary>
+            <param name="next"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:Microsoft.Owin.Diagnostics.WelcomePageMiddleware.Invoke(System.Collections.Generic.IDictionary{System.String,System.Object})">
+             <summary>
+            
+             </summary>
+             <param name="environment"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Owin.ErrorPageExtensions">
+            <summary>
+            IAppBuilder extension methods for the ErrorPageMiddleware.
+            </summary>
+        </member>
+        <member name="M:Owin.ErrorPageExtensions.UseErrorPage(Owin.IAppBuilder)">
+            <summary>
+            Captures synchronous and asynchronous exceptions from the pipeline and generates HTML error responses.
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Owin.Diagnostics.ErrorPageMiddleware">
+            <summary>
+            Captures synchronous and asynchronous exceptions from the pipeline and generates HTML error responses.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Owin.Diagnostics.ErrorPageMiddleware.#ctor(System.Func{System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.Tasks.Task})">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+        </member>
+        <member name="M:Microsoft.Owin.Diagnostics.ErrorPageMiddleware.Invoke(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="environment"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Owin.Diagnostics.DiagnosticsPageMiddleware">
+            <summary>
+            A human readable page with basic debugging actions.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Owin.Diagnostics.DiagnosticsPageMiddleware.#ctor(System.Func{System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.Tasks.Task},Microsoft.Owin.Diagnostics.DiagnosticsPageOptions)">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:Microsoft.Owin.Diagnostics.DiagnosticsPageMiddleware.Invoke(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="environment"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Owin.DiagnosticsPageExtensions">
+            <summary>
+            IAppBuilder extensions for the DiagnosticsPageMiddleware.
+            </summary>
+        </member>
+        <member name="M:Owin.DiagnosticsPageExtensions.UseDiagnosticsPage(Owin.IAppBuilder,Microsoft.Owin.Diagnostics.DiagnosticsPageOptions)">
+            <summary>
+            Adds the DiagnosticsPageMiddleware to the pipeline with the given options.
+            </summary>
+            <param name="builder"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Owin.DiagnosticsPageExtensions.UseDiagnosticsPage(Owin.IAppBuilder,System.String)">
+            <summary>
+            Adds the DiagnosticsPageMiddleware to the pipeline with the given path.
+            </summary>
+            <param name="builder"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Owin.DiagnosticsPageExtensions.UseDiagnosticsPage(Owin.IAppBuilder)">
+            <summary>
+            Adds the DiagnosticsPageMiddleware to the pipeline.
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Owin.Diagnostics.WelcomePageOptions">
+            <summary>
+            Options for the WelcomePageMiddleware.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Owin.Diagnostics.WelcomePageOptions.Path">
+            <summary>
+            Specifies which requests paths will be responded to. Exact matches only. Leave null to handle all requests.
+            </summary>
+        </member>
+    </members>
+</doc>

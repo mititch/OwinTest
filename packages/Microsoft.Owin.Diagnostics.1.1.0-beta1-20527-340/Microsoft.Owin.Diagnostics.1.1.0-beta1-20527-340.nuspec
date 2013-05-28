@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Owin.Diagnostics</id>
+    <version>1.1.0-beta1-20527-340</version>
+    <title>Microsoft.Owin.Diagnostics  (nightly 2013 521 27)</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/aspnetcomponent_enu.htm</licenseUrl>
+    <projectUrl>http://katanaproject.codeplex.com/</projectUrl>
+    <iconUrl>https://nugetgallery.blob.core.windows.net/icons/Microsoft.Owin.Diagnostics.1.1.0-beta1-20527-340.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Microsoft.Owin.Diagnostics</description>
+    <summary>Microsoft.Owin.Diagnostics</summary>
+    <tags>Microsoft OWIN</tags>
+    <dependencies>
+      <dependency id="Owin" version="1.0" />
+    </dependencies>
+    <references>
+      <reference file="Microsoft.Owin.Diagnostics.dll" />
+    </references>
+  </metadata>
+</package>
