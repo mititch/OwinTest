@@ -32,11 +32,13 @@ namespace OwinWorkerRole
         {
             // Set the maximum number of concurrent connections 
             ServicePointManager.DefaultConnectionLimit = 12;
-
+            
             // For information on handling configuration changes
             // see the MSDN topic at http://go.microsoft.com/fwlink/?LinkId=166357.
 
-            app = WebApp.Start<Startup>(8068);
+            var endPoint = RoleEnvironment.CurrentRoleInstance.InstanceEndpoints["WorkerIn"];
+
+            app = WebApp.Start<Startup>(string.Format("{0}://{1}", endPoint.Protocol, endPoint.IPEndpoint));
 
             return base.OnStart();
 

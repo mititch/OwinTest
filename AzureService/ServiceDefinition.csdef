@@ -3,9 +3,11 @@
   <WorkerRole name="OwinWorkerRole" vmsize="ExtraSmall">
     <Imports>
       <Import moduleName="Diagnostics" />
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
     </Imports>
     <Endpoints>
-      <InputEndpoint name="Endpoint2" protocol="tcp" port="8069" />
+      <InputEndpoint name="WorkerIn" protocol="http" port="80" />
     </Endpoints>
   </WorkerRole>
 </ServiceDefinition>

@@ -3,7 +3,15 @@
   <Role name="OwinWorkerRole">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=katanatest;AccountKey=rN83JoxR3RR536i5iOqnLVauE/DJaVTfBYGivQChQPkJNoHPDJiQQItT3MOymLdQTWeCejKAMEcjEqoXDoVtjA==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="mititch@live.com" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEH0iTBTFCWC4RtWkycBZeJEwDQYJKoZIhvcNAQEBBQAEggEANRwwX+zY+bc2/E2raOb2kPdVXMS/PLVAZ4agcLiLGK8RzzvOHIPlZS9kEO5o0Nrk7ZyCkoEq4uMx1S9VKIpAYjZRVGk/2f7ZsVc/yioiH31wAaxS7lfvK+jTHox10Q94NMnrgUDy3m4vHxxRpvwzB1O1cC5QzwLvR7Rzw3Czzr+lsN0Iu7kUHINXAggUdtXQlIg6grvxRSOKg/yCdXpRG5HciuggdaP0zUbjy67Uu1lPs7C446DP/3Qo86jKigi8+wtEKt9VIEvHYVZhtTIjuFwl9XL2y4L0c6cGvNU2fBSgvy6CLrTZ15a+bRgoahBMtp6UwI18KROaGhHdTWJ+ljAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECLe9nlRXz3xrgBAKQBmTKm7D4orbAkCn/ziy" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2014-05-28T23:59:59.0000000+03:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
     </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="5CAA249147A8E6720583E3AC1F8799AC4CD36F6C" thumbprintAlgorithm="sha1" />
+    </Certificates>
   </Role>
 </ServiceConfiguration>
