@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+</head>
+    <body>
+        <h1>@Model.WelcomeMessage</h1>
+        <input type='text' id='message' /><button title="Send" value="Send" id="sendButton">Send</button>
+        <br/>
+        <div id='messageBox'>
+            <ul>
+            </ul>
+        </div>
+            
+    </body>
+    <script src="../Scripts/jquery-1.8.2.min.js"></script>
+    <script src="../Scripts/jquery.signalR-1.0.0.min.js"></script>
+    <script src="../signalr/hubs"></script>
+    <script type="text/javascript">
+
+        var hubProxy = $.connection.signalHub;
+        hubProxy.client.addMessage = function (message) {
+            var str = '<li>' + message + '</li>';
+            $('#messageBox ul').append(str);
+        };
+        
+        $.connection.hub.start().done(function () {
+
+            $('#sendButton').click(function () {
+                var elem = $('#message');
+                hubProxy.server.send($('#message').val());
+                $('#message').val('').focus();
+            });
+            
+        });
+    </script>
+</html>

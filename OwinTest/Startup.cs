@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Nancy;
 using Owin;
 using System.Web.Http;
 using System.Threading.Tasks;
+using OwinTest.Nancy;
 using OwinTest.Pipeline;
 
 namespace OwinTest
@@ -22,10 +24,16 @@ namespace OwinTest
             );
             app.UseWebApi(config);
 
-            //attempt to use CustomMiddleware component
+            //attempt to use SignalR
+            app.MapHubs();
+
+            //attempt to use Nancy
+            app.UseNancy(new NancyBootstrapper());
+
+            //attempt to use CustomMiddleware component - no work with Nancy
             app.Use(typeof(AddHeaderMiddleware));
 
-            //attempt to use simple request handler
+            //attempt to use simple request handler - no work with Nancy
             app.UseHandlerAsync((req, res) =>
             {
                 res.ContentType = "text/plain";
